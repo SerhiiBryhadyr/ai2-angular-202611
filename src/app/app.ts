@@ -4,9 +4,18 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],
-  templateUrl: './app.html',
+  template: `
+    <main>
+      <header class="brand-name">
+        <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true" />
+      </header>
+      <section class="content">
+        <router-outlet></router-outlet>
+      </section>
+    </main>
+  `,
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('lab-i');
+  protected readonly title = signal('homes');
 }
