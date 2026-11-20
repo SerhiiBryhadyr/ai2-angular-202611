@@ -1,0 +1,12 @@
+<div class="frame">
+  <div>Random component (max = {{ max() }})</div>
+  <span>{{ drawn() }}</span>
+  <button type="button" (click)="draw()">Losuj</button>
+  @if (drawn() !== null) {
+    @if (isLowerHalf()) {
+      <span class="green">dolna połowa wartości</span>
+    } @else {
+      <span class="red">górna połowa wartości</span>
+    }
+  }
+</div>
